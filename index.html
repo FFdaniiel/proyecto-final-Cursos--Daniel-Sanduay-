@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Estructura básica - Clase 5</title>
+</head>
+
+<body>
+
+    <header> <!-- Encabezado de la página -->
+        <img src="./assets/img/logo.jpg" alt="logo">
+        <h1> <!-- Título principal de la página -->
+            Hola mundo desde HTML
+        </h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenido principal de la página -->
+
+        <!-- Contenido multimedia -->
+        <section>
+            <h2>Contenido Multimedia</h2>
+            <!-- Video con subtítulos -->
+            <video src="./assets/video/video.mp4" controls width="600">
+                <track src="./assets/video/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+            </video>
+
+        </section>
+
+        <!-- cursos -->
+
+        <section class="cursos">
+            <h2>Nuestros Cursos</h2>
+            <div class="cursos-container">
+                <div class="curso">
+                    <img src="./assets/img/logo.jpg" alt="Desarrollo Web">
+                    <h3>Desarrollo Web</h3>
+                    <p>Aprende HTML, CSS y JavaScript</p>
+                    <div class="info-curso">
+                        <span><i class="fas fa-clock"></i> 12 semanas</span>
+                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
+                    </div>
+                    <button class="btn-inscripcion">Más información</button>
+                </div>
+                <!-- Fin -->
+                <div class="curso">
+                    <img src="./assets/img/logo.jpg" alt="Marketing Digital">
+                    <h3>Aprende Python</h3>
+                    <p>Aprende las bases de python.</p>
+                    <div class="info-curso">
+                        <span><i class="fas fa-clock"></i> 8 semanas</span>
+                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
+                    </div>
+                    <button class="btn-inscripcion">Más información</button>
+                </div>
+                <!-- Fin -->
+                <div class="curso">
+                    <img src="./assets/img/logo.jpg" alt="Marketing Digital">
+                    <h3>Aprende Python</h3>
+                    <p>Aprende las bases de python.</p>
+                    <div class="info-curso">
+                        <span><i class="fas fa-clock"></i> 8 semanas</span>
+                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
+                    </div>
+                    <button class="btn-inscripcion">Más información</button>
+                </div>
+                <!-- Fin -->
+                <div class="curso">
+                    <img src="./assets/img/logo.jpg" alt="Marketing Digital">
+                    <h3>Aprende Python</h3>
+                    <p>Aprende las bases de python.</p>
+                    <div class="info-curso">
+                        <span><i class="fas fa-clock"></i> 8 semanas</span>
+                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
+                    </div>
+                    <button class="btn-inscripcion">Más información</button>
+                </div>
+                <!-- Fin -->
+        </section>
+
+        <!-- Sección de Reseñas -->
+        <section class="resenas">
+            <h2>Nuestras Reseñas</h2>
+            <div class="resenas-container">
+                <div class="resena">
+                    <div class="resena-header">
+                        <img src="./assets/img/usuario1.jpg" alt="Usuario" class="usuario-img">
+                        <div class="usuario-info">
+                            <h4>Juan García</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>El curso de Desarrollo Web superó todas mis expectativas</p>
+                </div>
+                <!-- Fin reseña -->
+
+                <div class="resena">
+                    <div class="resena-header">
+                        <img src="./assets/img/usuario2.webp" alt="Usuario" class="usuario-img">
+                        <div class="usuario-info">
+                            <h4>Roberto Carlos</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>La metodología de enseñanza es clara y las prácticas son muy útiles</p>
+                </div>
+                <!-- Fin reseña -->
+            </div>
+        </section>
+
+        <!-- Sección de formulario -->
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <!-- form con endpoint de Formspree -->
+            <form action="https://formspree.io/f/xovebwqr" method="POST">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1544.1035527098352!2d-110.11563325151872!3d50.01048274737867!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sar!4f13.1!3m2!1m1!2zNTDCsDAwJzM3LjciTiAxMTDCsDA2JzE2LjciVw!5e1!3m2!1sen!2sar!4v1744670972770!5m2!1sen!2sar"
+            width="450" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="sitio-footer">
+            <div class="social-icons">
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>Copyright 2025</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
