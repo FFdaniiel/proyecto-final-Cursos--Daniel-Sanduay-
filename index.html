@@ -4,139 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cursos de tecnología para transformar tu futuro. Aprende desarrollo web, Python, UX/UI y más.">
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Css -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Cursos TTech</title>
 </head>
 
 <body>
-
     <header> <!-- Encabezado de la página -->
-        <img src="./assets/img/logo.jpg" alt="logo">
-        <h1> <!-- Título principal de la página -->
-            Hola mundo desde HTML
-        </h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="logo-nav">
+            <img src="./assets/img/logo.png" alt="logo">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#cursos"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+                    <li><a href="#resenas"><i class="fas fa-star"></i> Testimonios</a></li>
+                    <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    <!-- Carrito de compras -->
+                    <li>
+                        <div class="cart" id="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                            <span id="cart-count">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Contenido principal de la página -->
-
         <!-- Contenido multimedia -->
-        <section>
-            <h2>Contenido Multimedia</h2>
+        <section class="secciones multimedia" id="inicio">
+            <h1>TTech Cursos</h1>
+
+            <h2>Transforma tu Futuro con Tecnología</h2>
             <!-- Video con subtítulos -->
             <video src="./assets/video/video.mp4" controls width="600">
                 <track src="./assets/video/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
             </video>
-
+            <p class="intro-text">Aprende las habilidades más demandadas del mercado con nuestros cursos especializados
+            </p>
         </section>
 
-        <!-- cursos -->
-
-        <section class="cursos">
+        <!-- Sección de cursos -->
+        <section class="cursos" id="cursos">
             <h2>Nuestros Cursos</h2>
-            <div class="cursos-container">
-                <div class="curso">
-                    <img src="./assets/img/logo.jpg" alt="Desarrollo Web">
-                    <h3>Desarrollo Web</h3>
-                    <p>Aprende HTML, CSS y JavaScript</p>
-                    <div class="info-curso">
-                        <span><i class="fas fa-clock"></i> 12 semanas</span>
-                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
-                    </div>
-                    <button class="btn-inscripcion">Más información</button>
-                </div>
-                <!-- Fin -->
-                <div class="curso">
-                    <img src="./assets/img/logo.jpg" alt="Marketing Digital">
-                    <h3>Aprende Python</h3>
-                    <p>Aprende las bases de python.</p>
-                    <div class="info-curso">
-                        <span><i class="fas fa-clock"></i> 8 semanas</span>
-                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
-                    </div>
-                    <button class="btn-inscripcion">Más información</button>
-                </div>
-                <!-- Fin -->
-                <div class="curso">
-                    <img src="./assets/img/logo.jpg" alt="Marketing Digital">
-                    <h3>Aprende Python</h3>
-                    <p>Aprende las bases de python.</p>
-                    <div class="info-curso">
-                        <span><i class="fas fa-clock"></i> 8 semanas</span>
-                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
-                    </div>
-                    <button class="btn-inscripcion">Más información</button>
-                </div>
-                <!-- Fin -->
-                <div class="curso">
-                    <img src="./assets/img/logo.jpg" alt="Marketing Digital">
-                    <h3>Aprende Python</h3>
-                    <p>Aprende las bases de python.</p>
-                    <div class="info-curso">
-                        <span><i class="fas fa-clock"></i> 8 semanas</span>
-                        <span><i class="fas fa-signal"></i> Nivel inicial</span>
-                    </div>
-                    <button class="btn-inscripcion">Más información</button>
-                </div>
-                <!-- Fin -->
+            <div class="cursos-container" id="products-container">
+            </div>
         </section>
 
         <!-- Sección de Reseñas -->
-        <section class="resenas">
+        <section class="resenas" id="resenas">
             <h2>Nuestras Reseñas</h2>
             <div class="resenas-container">
-                <div class="resena">
-                    <div class="resena-header">
-                        <img src="./assets/img/usuario1.jpg" alt="Usuario" class="usuario-img">
-                        <div class="usuario-info">
-                            <h4>Juan García</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>El curso de Desarrollo Web superó todas mis expectativas</p>
-                </div>
-                <!-- Fin reseña -->
-
-                <div class="resena">
-                    <div class="resena-header">
-                        <img src="./assets/img/usuario2.webp" alt="Usuario" class="usuario-img">
-                        <div class="usuario-info">
-                            <h4>Roberto Carlos</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>La metodología de enseñanza es clara y las prácticas son muy útiles</p>
-                </div>
-                <!-- Fin reseña -->
             </div>
         </section>
 
         <!-- Sección de formulario -->
-        <section>
+        <section id="contacto">
             <h2>Formulario de Contacto</h2>
             <!-- form con endpoint de Formspree -->
             <form action="https://formspree.io/f/xovebwqr" method="POST">
@@ -158,30 +89,48 @@
                 <button type="submit">Enviar</button>
             </form>
         </section>
-
     </main>
 
     <!-- Footer -->
-
     <footer>
-
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1544.1035527098352!2d-110.11563325151872!3d50.01048274737867!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sar!4f13.1!3m2!1m1!2zNTDCsDAwJzM3LjciTiAxMTDCsDA2JzE2LjciVw!5e1!3m2!1sen!2sar!4v1744670972770!5m2!1sen!2sar"
-            width="450" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <div class="sitio-footer">
-            <div class="social-icons">
-                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Sección del mapa -->
+        <div class="footer-map-section">
+            <h3>Visitanos</h3>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1544.1035527098352!2d-110.11563325151872!3d50.01048274737867!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1m1!2zNTDCsDAwJzM3LjciTiAxMTDCsDA2JzE2LjciVw!5e1!3m2!1sen!2sar!4v1744670972770!5m2!1sen!2sar"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-            <p>Copyright 2025</p>
         </div>
 
+        <!-- Información del footer -->
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#resenas">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>TTech Cursos</h4>
+                <p>Transformamos vidas a través de la educación tecnológica</p>
+                <div class="contact-container">
+                </div>
+            </div>
+        </div>
+
+        <!-- sitios/redes -->
+        <div class="sitio-footer">
+        </div>
     </footer>
 
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
